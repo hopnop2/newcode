@@ -7,13 +7,13 @@ export default function Rootlayout() {
         headerShown: true,
         headerTitleAlign: "center",
         headerStyle:  {
-            backgroundColor: "skyblue",
+            backgroundColor: "red",
 
         },
         headerTintColor:"white"
     }}>
         <Stack.Screen name="(admin)" options={{headerShown: false }} />
-        <Stack.Screen name="index" options={{title: "Home"}} />
+        <Stack.Screen name="index" options={{title: "Main"}} />
         <Stack.Screen name="contact" options={{title: "Contact"}} />
     </Stack>
   )

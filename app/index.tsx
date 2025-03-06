@@ -9,11 +9,14 @@ export default function Index() {
   const router = useRouter();
   return (
     <LinearGradient 
-      colors={['#000000', '#6a1b9a','#6a1b9a',]} 
-      style={Login.container}
-    >
+  colors={['#FF0000', '#FFD700', '#FFFFFF']} // สีแดงเลโก้ -> เหลืองเลโก้ -> ขาว
+  style={Login.container}
+  start={{ x: 0, y: 0 }}
+  end={{ x: 1, y: 1 }}
+>
+
       <View style={Login.spacing} />
-      <Image source={{ uri:'https://img.icons8.com/?size=512&id=gKHNPSTv94S9&format=png' }} style={Login.logo} />
+      <Image source={{ uri:'https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/LEGO_logo.svg/768px-LEGO_logo.svg.png' }} style={Login.logo} />
       <Text style={Login.title}>Welcome  </Text>
       <TextInput 
         style={[Login.input, ]} 
@@ -35,9 +38,9 @@ export default function Index() {
           router.push({
             pathname : "/contact",
             params : {
-              name : "Mill",
-              major : "IT",
-              email : "pilan.mill@gmail.com",
+              name : "Phusin Sosud",
+              major : "Information Technology",
+              email : "gamertoy3366@gmail.com",
             }
           }
         )} 

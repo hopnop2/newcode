@@ -7,7 +7,7 @@ export default function AdminLayout() {
         headerShown: true,
         headerTitleAlign: "center",
         headerStyle: {
-          backgroundColor: "skyblue",
+          backgroundColor: "red",
         },
         headerTintColor: "white",
       }}
