@@ -32,7 +32,7 @@ export default function Index() {
       
         <Link href="contact">Click Here</Link>
         <Button title='Click test' onPress={()=> 
-          router.push("/contact?name=Mill&major=IT")} 
+          router.push("/contact?name=ball&major=IT")} 
         />
           <Button title='Click Params' onPress={()=> 
           router.push({
@@ -51,7 +51,7 @@ export default function Index() {
         <Button title='Go to Profile' onPress={()=> 
           router.push("/user/profile")} 
         />
-      <About />
+          <About />
       <StatusBar style="auto" />
     </LinearGradient>
   );
