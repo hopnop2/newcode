@@ -9,12 +9,12 @@ const Login = StyleSheet.create({
         backgroundColor: "#C5D0E6", // สีน้ำเงินอ่อนแบบ Lego
     },
     spacing: {
-        height: 30,
+        height: 10,
     },
     logo: {
-        width: 300,
-        height: 300,
-        marginBottom: 20,
+        width: 150,
+        height: 150,
+        marginBottom:10,
         borderWidth: 4,
         borderColor: "#000",
         borderRadius: 12,
@@ -23,13 +23,13 @@ const Login = StyleSheet.create({
         shadowOffset: { width: 0, height: 4 },
         shadowOpacity: 0.3,
         shadowRadius: 0,
-        marginTop: 50,
+        marginTop: 175,
     },
     title: {
         fontSize: 32,
         fontWeight: "900",
         color: "#FF0000", // สีแดง Lego
-        marginBottom: 25,
+        marginBottom: 10,
         textShadowColor: "#000",
         textShadowOffset: { width: 2, height: 2 },
         textShadowRadius: 0,
@@ -44,7 +44,7 @@ const Login = StyleSheet.create({
         paddingHorizontal: 15,
         backgroundColor: "#FFD700", // สีเหลือง Lego
         color: "#000",
-        marginBottom: 15,
+        marginBottom: 5,
         fontSize: 18,
         fontWeight: "bold",
         elevation: 5,
@@ -56,7 +56,7 @@ const Login = StyleSheet.create({
         borderWidth: 3,
         borderColor: "#000",
         borderRadius: 8,
-        marginTop: 20,
+        marginTop: 5,
         shadowColor: "#000",
         shadowOffset: { width: 0, height: 4 },
         shadowOpacity: 0.3,

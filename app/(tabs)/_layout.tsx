@@ -1,13 +1,20 @@
 import { Tabs } from "expo-router";
 import TabBarIcon from "@/components/navigation/TabBarIcon ";
-
+import { FontAwesome } from "@expo/vector-icons";
 
 
 export default function TabLayout() {
   return (
  <Tabs screenOptions={{
-    headerShown: true ,
+    headerShown: true,
     headerTitleAlign: "center",
+    headerStyle: {
+      backgroundColor: "red",
+    },
+    tabBarLabelStyle: { fontSize: 12, fontWeight: "bold", color: "white", },
+    tabBarStyle: { backgroundColor: "red" ,height:90,  },
+    tabBarActiveTintColor: "white",
+    tabBarInactiveBackgroundColor: "white",
 
  }}> 
 
@@ -27,7 +34,7 @@ export default function TabLayout() {
         options={{
           title: "Contract",
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name="call" color={color} />
+            <TabBarIcon name="phone" color={color} />
           ),
         }}
       />
@@ -37,14 +44,10 @@ export default function TabLayout() {
         options={{
           title: "Admin",
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name="person" color={color} />
+            <TabBarIcon name="users" color={color} />
           ),
         }}
       />
-
-
-
-
 
  </Tabs>
   )

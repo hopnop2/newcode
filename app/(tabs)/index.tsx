@@ -6,18 +6,26 @@ import {
   TextInput, 
   Image, 
   TouchableOpacity, 
-  Button 
+  Button ,
+  ScrollView,
+  
 } from 'react-native'; // คอมโพเนนต์พื้นฐานของ React Native
 import { LinearGradient } from 'expo-linear-gradient'; // ลูกเล่นพื้นหลังสีไล่ระดับ
 import Login from '@/constants/Login '; // นำเข้าสไตล์จากไฟล์คอนฟิกรูปลักษณ์
 import About from '@/components/About '; // นำเข้าคอมโพเนนต์ About จากโฟลเดอร์ components
 import { Link, useRouter } from 'expo-router'; // ระบบเนวิเกชันสำหรับ Expo
 
+
+
+
+
 // คอมโพเนนต์หลักของหน้าแรก
 export default function Index() {
   const router = useRouter(); // ตัวจัดการการเปลี่ยนหน้า
 
   return (
+
+  <ScrollView style={{ flex: 1}}>
     <LinearGradient 
       colors={['#FF0000', '#FFD700', '#FFFFFF']} // โทนสีแดง-ทอง-ขาวแบบ LEGO
       style={Login.container}
@@ -86,5 +94,8 @@ export default function Index() {
       <About /> {/* แสดงคอมโพเนนต์ About */}
       <StatusBar style="auto" /> {/* ตั้งค่าสถานะบาร์อัตโนมัติ */}
     </LinearGradient>
+  </ScrollView>
+
+
   );
 }

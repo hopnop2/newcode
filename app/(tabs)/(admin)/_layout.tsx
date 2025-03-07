@@ -4,7 +4,7 @@ export default function AdminLayout() {
   return (
     <Stack
       screenOptions={{
-        headerShown: true,
+        headerShown: false,
         headerTitleAlign: "center",
         headerStyle: {
           backgroundColor: "red",
