@@ -9,20 +9,23 @@ import {
   Button ,
   ScrollView,
   
+  
 } from 'react-native'; // คอมโพเนนต์พื้นฐานของ React Native
 import { LinearGradient } from 'expo-linear-gradient'; // ลูกเล่นพื้นหลังสีไล่ระดับ
 import Login from '@/constants/Login '; // นำเข้าสไตล์จากไฟล์คอนฟิกรูปลักษณ์
 import About from '@/components/About '; // นำเข้าคอมโพเนนต์ About จากโฟลเดอร์ components
 import { Link, useRouter } from 'expo-router'; // ระบบเนวิเกชันสำหรับ Expo
-
-
-
-
+import Profile1 from '@/assets/images/profile1.jpg'; // นำเข้ารูปภาพจากโฟลเดอร์ assets
+import Profile2 from '@/assets/images/profile2.jpg'; // นำเข้ารูปภาพจากโฟลเดอร์ assets
+import Profile3 from '@/assets/images/profile3.jpg'; // นำเข้ารูปภาพจากโฟลเดอร์ assets
+import { Alert } from 'react-native';
 
 // คอมโพเนนต์หลักของหน้าแรก
 export default function Index() {
   const router = useRouter(); // ตัวจัดการการเปลี่ยนหน้า
+  const showalert = () => {
 
+  }
   return (
 
   <ScrollView style={{ flex: 1}}>
@@ -90,9 +93,27 @@ export default function Index() {
         title='Go to Profile' 
         onPress={() => router.push("/user/profile")} // แบบ Nested Route
       />
+  
+      <Text style= {{alignItems:'center'}}> use image</Text>
+      <Text> &nbsp; </Text>
+      <Image source = {require("@/assets/images/profile1.jpg ")}
+       style = {{   borderRadius: 100 , marginHorizontal: 10}}
+       resizeMode='cover'
+      />
+      <Text> &nbsp; </Text>
+      <Text style= {{alignItems:'center'}}> use image</Text>
+      <Text> &nbsp; </Text>
+      <Image source = {require("@/assets/images/profile2.jpg ")}
+       style = {{   borderRadius: 100 , marginHorizontal: 10}}
+       resizeMode='cover'
+      />
+     
 
-      <About /> {/* แสดงคอมโพเนนต์ About */}
       <StatusBar style="auto" /> {/* ตั้งค่าสถานะบาร์อัตโนมัติ */}
+
+
+
+       {/* แสดงคอมโพเนนต์ About */}
     </LinearGradient>
   </ScrollView>
 
