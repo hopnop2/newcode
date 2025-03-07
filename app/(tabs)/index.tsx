@@ -15,17 +15,38 @@ import { LinearGradient } from 'expo-linear-gradient'; // ลูกเล่น�
 import Login from '@/constants/Login '; // นำเข้าสไตล์จากไฟล์คอนฟิกรูปลักษณ์
 import About from '@/components/About '; // นำเข้าคอมโพเนนต์ About จากโฟลเดอร์ components
 import { Link, useRouter } from 'expo-router'; // ระบบเนวิเกชันสำหรับ Expo
-import Profile1 from '@/assets/images/profile1.jpg'; // นำเข้ารูปภาพจากโฟลเดอร์ assets
+import { Alert } from 'react-native';
+import { TouchableHighlight } from 'react-native';
+/*import Profile1 from '@/assets/images/profile1.jpg'; // นำเข้ารูปภาพจากโฟลเดอร์ assets
 import Profile2 from '@/assets/images/profile2.jpg'; // นำเข้ารูปภาพจากโฟลเดอร์ assets
 import Profile3 from '@/assets/images/profile3.jpg'; // นำเข้ารูปภาพจากโฟลเดอร์ assets
-import { Alert } from 'react-native';
+*/
 
 // คอมโพเนนต์หลักของหน้าแรก
 export default function Index() {
   const router = useRouter(); // ตัวจัดการการเปลี่ยนหน้า
-  const showalert = () => {
-
-  }
+  const showAlert = () => {
+    Alert.alert(
+      "Alert Title",
+      "This is the Content",
+      [
+        {
+          text: "Cacel",
+          onPress: () => console.log("Cancel Pressed"),
+          style: "cancel",
+        },
+        {
+          text: "OK",
+          onPress: () => console.log("OK Pressed"),
+        },
+        {
+          text: "Yes",
+          onPress: () => console.log("Yes Pressed"),
+        },
+      ],
+      { cancelable: false }
+    );
+  };
   return (
 
   <ScrollView style={{ flex: 1}}>
@@ -59,7 +80,7 @@ export default function Index() {
       />
 
       {/* ปุ่มล็อกอินแบบ Custom */}
-      <TouchableOpacity style={Login.button}>
+      <TouchableOpacity style={Login.button} onPress={showAlert}>
         <Text style={Login.buttonText}>Login</Text>
       </TouchableOpacity>
 
@@ -107,8 +128,28 @@ export default function Index() {
        style = {{   borderRadius: 100 , marginHorizontal: 10}}
        resizeMode='cover'
       />
-     
+      <Text> &nbsp; </Text>
 
+     <TouchableHighlight
+          underlayColor="white"
+          style={{
+            backgroundColor: "skyblue",
+            paddingVertical: 20,
+            paddingHorizontal: 20,
+            justifyContent: "center",
+            alignItems: "center",
+            borderRadius: 10,
+          }}
+          onPress={() => {
+            showAlert();
+          }}
+        >
+          <Text>Show Alert</Text>
+        </TouchableHighlight>
+
+
+
+     
       <StatusBar style="auto" /> {/* ตั้งค่าสถานะบาร์อัตโนมัติ */}
 
 
